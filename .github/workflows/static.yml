@@ -3,6 +3,11 @@ on:
   push:
     branches:
       - main
+permissions:
+  id-token: write    # Needed for deploy-pages
+  pages: write       # Needed for deploy-pages
+  contents: read     # Needed for actions/checkout
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
